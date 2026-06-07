@@ -95,13 +95,13 @@
       justify-content: center;
       align-self: start;
       min-width: 0;
-      margin-top: -40px;
     }
     .hero-photo img {
       display: block;
       height: 80vh;
       width: auto;
       mix-blend-mode: multiply;
+      transform: translateY(-190px);
     }
     .hero-pill {
       display: inline-block;
@@ -308,26 +308,30 @@
     @media (max-width: 680px) {
       #hero { padding: 0; }
       .hero-inner {
-        grid-template-columns: 1fr;
-        padding: 24px 20px 0;
+        grid-template-columns: 55% 45%;
+        padding: 16px 16px 0;
         gap: 0;
+        align-items: end;
       }
       .hero-text {
-        text-align: center;
-        padding-right: 0;
-        padding-bottom: 24px;
-      }
-      #hero h1 { font-size: 30px; }
-      #hero .sub { font-size: 15px; margin-left: auto; margin-right: auto; }
-      .hero-photo {
-        justify-content: center;
+        text-align: left;
+        padding-right: 8px;
+        padding-bottom: 20px;
         padding-top: 0;
       }
+      #hero h1 { font-size: 22px; letter-spacing: -.02em; }
+      .free-badge { font-size: 10px; padding: 5px 10px; margin-bottom: 10px; }
+      .btn-orange { font-size: 14px; padding: 12px 20px; }
+      .hero-note { font-size: 11px; }
+      .hero-photo {
+        justify-content: center;
+        align-self: end;
+      }
       .hero-photo img {
-        height: 50vh;
+        height: 65vh;
         width: auto;
-        margin: 0 auto;
         display: block;
+        transform: translateY(-190px);
       }
       .michael-box { flex-direction: column; padding: 32px 24px; gap: 24px; align-items: center; }
       .michael-photo { width: 160px; }
