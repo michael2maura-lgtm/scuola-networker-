@@ -73,7 +73,6 @@
       position: relative; z-index: 10;
       padding: 0;
       background: var(--background);
-      overflow: hidden;
     }
     .hero-inner {
       display: grid;
@@ -86,7 +85,7 @@
     }
     .hero-text {
       padding-right: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 16px;
       padding-top: 0;
     }
     .hero-photo {
@@ -102,6 +101,7 @@
       width: auto;
       mix-blend-mode: multiply;
       transform: translateY(-190px);
+      margin-bottom: -190px;
     }
     .hero-pill {
       display: inline-block;
@@ -121,6 +121,8 @@
       background: var(--gradient-orange);
       -webkit-background-clip: text; background-clip: text;
       -webkit-text-fill-color: transparent;
+      padding-right: 6px;
+      padding-bottom: 4px;
     }
     .serif-italic { font-family: 'Instrument Serif', serif; font-style: italic; }
     #hero .sub {
@@ -173,7 +175,7 @@
     }
 
     /* ─── PROBLEMA ─── */
-    #problema { background: #fff; }
+    #problema { background: #fff; padding-top: 32px; }
     #problema .container { text-align: center; }
     .problema-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
