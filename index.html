@@ -78,8 +78,8 @@
     .hero-inner {
       display: grid;
       grid-template-columns: 55% 45%;
-      align-items: center;
-      min-height: calc(100vh - 64px);
+      align-items: start;
+      min-height: auto;
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 48px;
@@ -87,21 +87,21 @@
     .hero-text {
       padding-right: 40px;
       padding-bottom: 40px;
-      padding-top: 40px;
+      padding-top: 0;
     }
     .hero-photo {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: center;
-      align-self: stretch;
+      align-self: start;
       min-width: 0;
+      padding-top: 0;
     }
     .hero-photo img {
       display: block;
-      height: calc(100vh - 64px);
+      height: 75vh;
       width: auto;
       mix-blend-mode: multiply;
-      margin-bottom: 130px;
     }
     .hero-pill {
       display: inline-block;
@@ -306,13 +306,32 @@
 
     /* ─── MOBILE ─── */
     @media (max-width: 680px) {
-      #hero { padding: 80px 0 60px; }
-      #hero h1 { font-size: 32px; }
-      .hero-inner { flex-direction: column; gap: 32px; text-align: center; }
-      .hero-photo { width: 180px; margin: 0 auto; }
+      #hero { padding: 0; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 24px 20px 0;
+        gap: 0;
+      }
+      .hero-text {
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 24px;
+      }
+      #hero h1 { font-size: 30px; }
+      #hero .sub { font-size: 15px; margin-left: auto; margin-right: auto; }
+      .hero-photo {
+        justify-content: center;
+        padding-top: 0;
+      }
+      .hero-photo img {
+        height: 55vw;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+      }
       .michael-box { flex-direction: column; padding: 32px 24px; gap: 24px; align-items: center; }
       .michael-photo { width: 160px; }
-      .michael-stats { gap: 20px; }
+      .michael-stats { gap: 20px; flex-wrap: wrap; }
       .soluzione-box { padding: 32px 24px; }
     }
   </style>
